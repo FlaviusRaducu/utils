@@ -27,7 +27,7 @@ elif [[ "$1" == "install" ]]; then
     -smp "$img_vcpus" \
     -cdrom "$img_path" \
     -drive file="$disk_path",if=virtio \
-    -vga virtio \
+    -vga std \
     -usb \
     -cpu host \
     -machine type=q35,accel="$accel"
@@ -45,7 +45,7 @@ elif [[ "$1" == "start" ]]; then
     -m "$img_ram" \
     -smp "$img_vcpus" \
     -drive file="$disk_path",if=virtio \
-    -vga virtio \
+    -vga std \
     -device usb-tablet \
     -usb \
     -cpu host \
