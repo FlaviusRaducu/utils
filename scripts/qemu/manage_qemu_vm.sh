@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# virtio drivers need to be installed on guest os
 
 if [[ $# -ne 1 ]]; then
     echo "Please enter at least an argument: create, install, start"
@@ -27,7 +27,7 @@ elif [[ "$1" == "install" ]]; then
     -smp "$img_vcpus" \
     -cdrom "$img_path" \
     -drive file="$disk_path",if=virtio \
-    -vga std \
+    -vga virtio \
     -usb \
     -cpu host \
     -machine type=q35,accel="$accel"
@@ -45,7 +45,7 @@ elif [[ "$1" == "start" ]]; then
     -m "$img_ram" \
     -smp "$img_vcpus" \
     -drive file="$disk_path",if=virtio \
-    -vga std \
+    -vga virtio \
     -device usb-tablet \
     -usb \
     -cpu host \
