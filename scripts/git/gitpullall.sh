@@ -1,6 +1,5 @@
-#!/bin/zsh
+#!/bin/bash
 
-# Store the current directory to return to later
 # Assumes that $start_dir contains only git repos
 start_dir=$(pwd)
 
