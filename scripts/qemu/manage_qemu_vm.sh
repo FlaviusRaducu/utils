@@ -10,9 +10,7 @@ elif [[ "$1" == "create" ]]; then
     echo "Creating qemu disk..."
     read -p "Please enter disk name: " disk_name
     read -p "Please enter disk size, e.g. 15G: " disk_size
-
     qemu-img create -f qcow2 "$disk_name".qcow2 "$disk_size"
-
     exit 0
 
 
@@ -33,7 +31,6 @@ elif [[ "$1" == "install" ]]; then
     -usb \
     -cpu host \
     -machine type=q35,accel="$accel"
-
     exit 0
 
 
@@ -53,7 +50,6 @@ elif [[ "$1" == "start" ]]; then
     -usb \
     -cpu host \
     -machine type=q35,accel="$accel"
-
     exit 0
 fi
 
