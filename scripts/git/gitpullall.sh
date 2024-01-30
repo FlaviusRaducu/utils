@@ -7,9 +7,11 @@ start_dir=$(pwd)
 find "$start_dir" -type d -maxdepth 1 -mindepth 1 | while read -r dir; do
     cd "$dir"
 
-    # Echo the repo path for clarity
+    # Echo the repo path and current branch for clarity
     echo "Updating repo: $dir"
     git pull
+    echo "Current branch:":
+    git branch
 	echo ""
 
 	cd "$start_dir"
