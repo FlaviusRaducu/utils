@@ -13,4 +13,4 @@ vim.opt.spell = true
 vim.opt.spelllang = "en_gb"
 
 -- Set colorscheme
-vim.cmd("colorscheme torte")
+vim.cmd("colorscheme slate")
